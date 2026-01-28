@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="UrFit — simple static scaffold" />
+  <title>UrFit</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon / logo placed in assets/ (optional) -->
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <!-- Replace with your logo in assets/ -->
+        <img src="assets/logo.svg" alt="UrFit logo" class="brand-logo" />
+        <span class="brand-name">UrFit</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+        ☰
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#get-started">Get started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to UrFit</h1>
+        <p class="lead">A minimal static scaffold for your project. Replace this with your app landing content.</p>
+        <p>
+          <a class="btn" href="#get-started">Get started</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2>Features</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Simple</h3>
+          <p>Minimal, easy-to-extend HTML, CSS, and JS structure.</p>
+        </article>
+
+        <article class="card">
+          <h3>Static-ready</h3>
+          <p>Works with any static host (GitHub Pages, Netlify, Vercel, etc.).</p>
+        </article>
+
+        <article class="card">
+          <h3>Organized</h3>
+          <p>Assets, CSS and JS directories laid out for clarity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="get-started" class="container">
+      <h2>Get started</h2>
+      <ol>
+        <li>Edit <code>index.html</code> to match your content.</li>
+        <li>Put images or fonts into <code>assets/</code>.</li>
+        <li>Modify <code>css/style.css</code> and <code>js/main.js</code> as needed.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> UrFit</small>
+    </div>
+  </footer>
+
+  <script defer src="js/main.js"></script>
+</body>
+</html>

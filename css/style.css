@@ -1,0 +1,84 @@
+/* Basic scaffold styles for UrFit */
+
+/* Reset-ish */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout helpers */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* Header */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e6edf3;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: .5rem; text-decoration: none; color: inherit; }
+.brand-logo { width: 36px; height: 36px; display: block; }
+.brand-name { font-weight: 700; font-size: 1.05rem; }
+
+/* Nav */
+.site-nav ul { list-style: none; display: flex; gap: 0.75rem; align-items: center; }
+.site-nav a { color: #0f172a; text-decoration: none; padding: 0.5rem; border-radius: 6px; }
+.site-nav a:hover { background: #eef6fb; }
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+}
+
+/* Hero */
+.hero {
+  padding: 3.25rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  text-align: center;
+}
+.hero h1 { font-size: 2rem; margin-bottom: .5rem; color: #05264b; }
+.lead { color: #334155; margin-bottom: 1rem; }
+.btn {
+  display: inline-block;
+  background: #0b74ff;
+  color: #fff;
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn:hover { background: #095cd6; }
+
+/* Features */
+.features { padding: 2rem 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.card { background: #fff; border: 1px solid #e6edf3; padding: 1rem; border-radius: 8px; }
+
+/* Footer */
+.site-footer { padding: 1rem 0; text-align: center; color: #64748b; border-top: 1px solid #e6edf3; margin-top: 2rem; }
+
+/* Small screens */
+@media (max-width: 720px) {
+  .nav-toggle { display: inline-flex; align-items: center; gap: .5rem; }
+  .site-nav { display: none; }
+  .site-nav.open { display: block; position: absolute; right: 1.25rem; top: 64px; background: #fff; border: 1px solid #e6edf3; padding: .5rem; border-radius: 8px; }
+  .site-nav ul { flex-direction: column; }
+}
